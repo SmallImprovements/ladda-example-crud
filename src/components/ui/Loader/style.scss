@@ -1,0 +1,8 @@
+@import "../../../shared";
+
+:local(.container) {
+    @include blink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
