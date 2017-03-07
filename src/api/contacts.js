@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { ROOT } from 'constants/paths';
 
-const BASE_URL = '/api/contacts'
+const BASE_URL = `${ROOT}/api/contacts`;
 const extractData = (response) => response.data;
 
 getContacts.operation = 'READ';
