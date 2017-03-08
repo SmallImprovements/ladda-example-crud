@@ -5,9 +5,9 @@ import Avatar from 'components/ui/Avatar';
 import withResolve from 'hocs/withResolve';
 import withOwnerId from 'hocs/withOwnerId';
 
-import styles from './styles.scss';
-
 import api from 'api';
+
+import styles from './styles.scss';
 
 function ContactList({ contacts }) {
   return (
