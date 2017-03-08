@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { flow, map } from 'lodash';
 import { Page, Card } from 'components/Layout';
 import Avatar from 'components/ui/Avatar';
@@ -13,9 +14,11 @@ function ContactList({ contacts }) {
     <Page>
       <h2>Contact List</h2>
       <div>
-          { map(contacts, (contact) => (
+        { map(contacts, (contact) => (
+          <Link key={ contact.id } to={ `edit/${contact.id}` } >
             <Contact key={ contact.id } contact={ contact } />
-          ))}
+          </Link>
+        ))}
       </div>
    </Page>
  );
