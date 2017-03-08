@@ -9,7 +9,7 @@ const routes = (
   <Route path="/" component={ Root }>
     <IndexRoute component={ ContactList } />
     <Route path="create" component={ ContactCreate } />
-    <Route path="edit" component={ ContactEdit } />
+    <Route path="edit/:id" component={ ContactEdit } />
   </Route>
 );
 
