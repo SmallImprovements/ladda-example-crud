@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
 import { flow } from 'lodash';
-import withResolve from 'hocs/withResolve'
+import withResolve from 'hocs/withResolve';
 import api from 'api';
-import { Page, Card } from 'components/Layout';
-import ContactEditForm from 'components/ContactEditForm'
+import { NarrowPage, Card } from 'components/Layout';
+import ContactEditForm from 'components/ContactEditForm';
 
 function ContactEdit({ contact, router }) {
   const goToList = () => router.push('/');
@@ -17,14 +17,14 @@ function ContactEdit({ contact, router }) {
   };
 
   return (
-    <Page>
+    <NarrowPage>
       <h2>Edit Contact</h2>
       <ContactEditForm
         contact={ contact }
         onSave={ onSave }
         onCancel={ goToList }
       />
-    </Page>
+    </NarrowPage>
   );
 }
 
