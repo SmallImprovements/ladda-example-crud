@@ -21,6 +21,7 @@ export function updateContact(contact) {
 }
 
 createContact.operation = 'CREATE';
+createContact.invalidates = ['getContacts'];
 export function createContact(contact) {
   return axios.post(BASE_URL, contact).then(extractData);
 }
