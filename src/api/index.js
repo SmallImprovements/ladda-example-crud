@@ -3,7 +3,8 @@ import * as contacts from './contacts';
 
 const config = {
   contacts: {
-    api: contacts
+    api: contacts,
+    ttl: 300
   }
 };
 

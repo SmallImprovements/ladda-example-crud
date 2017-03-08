@@ -22,7 +22,6 @@ export function updateContact(contact) {
 createContact.operation = 'CREATE';
 export function createContact(contact) {
   return axios.post(BASE_URL, contact).then(extractData);
-
 }
 
 deleteContact.operation = 'DELETE';

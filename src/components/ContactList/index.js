@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import { flow, map } from 'lodash';
 import { Page, Card } from 'components/Layout';
 import Avatar from 'components/ui/Avatar';

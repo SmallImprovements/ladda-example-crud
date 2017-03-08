@@ -13,5 +13,9 @@
 
 :local(.actions) {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  button {
+    width: 40%;
+  }
 }

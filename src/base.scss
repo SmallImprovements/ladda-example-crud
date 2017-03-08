@@ -83,11 +83,11 @@ body {
 }
 
 a {
-  color: $secondary-darker;
+  color: inherit;
   text-decoration: none;
 
   &:hover {
-    border-bottom: 1px solid $secondary-darker;
+    border-bottom: 1px solid inherit;
   }
 }
 
@@ -156,50 +156,14 @@ button, .button {
   cursor: pointer;
   font-weight: 300;
 
-  &.highlight {
-    background-color: $primary;
-    color: $off;
-
-    &:hover {
-      background-color: $primary-darker;
-    }
-  }
-
-  &.outline {
-    &.small {
-      border: 1px solid $primary;
-    }
-    
-    border-color: $primary;
-    background-color: white;
-    color: $primary;
-
-    &:hover {
-      border-color: $primary-darker;
-      color: white;
-      background-color: $primary;
-    }
-  }
-
-  &.off {
-    background-color: $off;
-    color: $primary;
-  }
-
   &.full {
     width: 100%;
     text-align: center;
   }
-  &.link {
-    color: $secondary-darker;
-    background-color: transparent;
-  }
-}
 
-.form-list {
-  list-style-type: none;
-  padding: 0 0 $spacing-l 0;
-  margin: 0;
+  &.save {
+    background-color: $save;
+  }
 }
 
 @mixin input-hover {
@@ -235,194 +199,6 @@ input {
 label, .label {
   @include type-s;
   display: inline-block;
-}
-
-input[type="checkbox"], input[type="radio"] {
-  display: inline-block;
-  width: auto;
-  margin-right: $spacing-m;
-}
-
-.checkboxes-custom, .radio-buttons-custom {
-  label {
-    @extend .label;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    padding-left: 25px;
-    padding-right: 15px;
-    margin-right: 15px;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 10px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      border: 1px solid $medium;
-      background-color: white;
-    }
-  }
-
-  /**
-   * Visually hiding default inputs,
-   * but keeping them tabbable
-   */
-
-  input[type="radio"],
-  input[type="checkbox"] {
-    border: 0;
-    padding: 0;
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: absolute;
-    width: auto;
-    visibility: hidden;
-  }
-
-  input[type="radio"] + label:before {
-    border-radius: 9px;
-  }
-
-  input[type="checkbox"] + label:before {
-    border-radius: $border-radius;
-  }
-
-  input:checked + label:after {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-  }
-
-  input[type="radio"]:checked + label:after {
-    content: '';
-    border-radius: 4px;
-    top: 5px;
-    left: 5px;
-    background: $primary;
-  }
-
-  input[type="checkbox"]:checked + label:after {
-    content: '';
-    background: url(data:image/svg+xml;encoding=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2211%22%20viewBox%3D%220%200%2013%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23eb7353%22%20d%3D%22M4.363%208.314l-2.63-2.82a.994.994%200%200%20%20%20%20%200-1.415-.051.999.999%200%200%200-.047%201.415l3.406%203.653a.994.994%200%200%200%201.201.205.996.996%200%200%200%20.426-.327l6.621-8.787A1%201%200%200%200%2010.328.398L4.363%208.314z%22%20%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
-    top: 4px;
-    left: 3px;
-    color: $primary;
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
-  }
-
-  &.checkboxes-custom--disabled, .radio-buttons-custom--disabled {
-    label {
-      color: $light;
-
-      &:before { background: $light; }
-    }
-  }
-}
-
-.radio-or-checkbox {
-	list-style-type: none;
-
-  label {
-    @extend .label;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    padding-left: 25px;
-    padding-right: 15px;
-    margin-right: 15px;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 10px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      border: 1px solid $medium;
-      background-color: white;
-    }
-  }
-
-  /**
-   * Visually hiding default inputs,
-   * but keeping them tabbable
-   */
-
-  input[type="radio"],
-  input[type="checkbox"] {
-    border: 0;
-    padding: 0;
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: absolute;
-    width: auto;
-    visibility: hidden;
-  }
-
-  input[type="radio"] + label:before {
-    border-radius: 9px;
-  }
-
-  input[type="checkbox"] + label:before {
-    border-radius: $border-radius;
-  }
-
-  input:checked + label:after {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-  }
-
-  input[type="radio"]:checked + label:after {
-    content: '';
-    border-radius: 4px;
-    top: 5px;
-    left: 5px;
-    background: $primary;
-  }
-
-  input[type="checkbox"]:checked + label:after {
-    content: '';
-    background: url(data:image/svg+xml;encoding=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2211%22%20viewBox%3D%220%200%2013%2011%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill%3D%22%235C8BCC%22%20d%3D%22M4.363%208.314l-2.63-2.82a.994.994%200%200%200-1.415-.051.999.999%200%200%200-.047%201.415l3.406%203.653a.994.994%200%200%200%201.201.205.996.996%200%200%200%20.426-.327l6.621-8.787A1%201%200%200%200%2010.328.398L4.363%208.314z%22%20%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E);
-    top: 4px;
-    left: 3px;
-    color: $primary;
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
-  }
-
-  &.checkboxes-custom--disabled, .radio-buttons-custom--disabled {
-    label {
-      color: $light;
-
-      &:before { background: $light; }
-    }
-  }
-}
-
-textarea {
-  @include type-s;
-  @include font-family;
-  @include input-hover;
-  border: 1px solid $medium;
-  margin: $spacing-m 0;
-  width: 100%;
-  padding: $spacing-m;
 }
 
 header, .header {

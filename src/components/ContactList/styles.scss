@@ -6,6 +6,10 @@
   max-width: 500px;
   margin-bottom: $spacing-m;
   cursor: pointer;
+
+  &:hover {
+    background: $medium;
+  }
 }
 
 :local(.details) {

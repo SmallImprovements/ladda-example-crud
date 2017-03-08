@@ -1,7 +1,6 @@
 import { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
 import classNames from 'classnames';
-import withNotifications from 'hocs/withNotifications';
 
 class LoadingButton extends Component {
 
@@ -46,9 +45,6 @@ class LoadingButton extends Component {
           return Promise.reject(err);
         });
       this.setState({ promise, loading: true });
-
-      const { notifications, notificationService } = this.props;
-      notificationService.applyToPromise(promise, notifications);
     }
   }
 
@@ -60,7 +56,7 @@ class LoadingButton extends Component {
     });
 
     const props = {
-      ...omit(otherProps, ['notificationService']),
+      ...otherProps,
       className,
       onClick: onClick ? (ev) => this.setPromise(onClick(ev)) : (() => {})
     };
@@ -75,4 +71,4 @@ LoadingButton.contextTypes = {
   form: PropTypes.shape({ onSubmit: PropTypes.func })
 };
 
-export default withNotifications(LoadingButton);
+export default LoadingButton;

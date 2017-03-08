@@ -1,10 +1,12 @@
 import { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
+import { flow } from 'lodash';
 import withResolve from 'hocs/withResolve'
 import api from 'api';
 import { Page, Card } from 'components/Layout';
 import { Form, FormInput, createFormState } from 'components/ui/Form';
 import Avatar from 'components/ui/Avatar';
+import LoadingButton from 'components/ui/LoadingButton';
 
 import styles from './styles.scss';
 
@@ -21,6 +23,7 @@ class ContactEdit extends Component {
 
     this.onFormChange = this.onFormChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onCancel = this.onCancel.bind(this);
   }
 
   onFormChange(form) {
@@ -30,10 +33,18 @@ class ContactEdit extends Component {
   onSubmit(event) {
     event.stopPropagation();
     event.preventDefault();
-    api.contacts.updateContact({
+    return api.contacts.updateContact({
       ...this.props.contact,
-      ...this.state.form
-    });
+      ...this.state.form.values
+    }).then(() => this.goToList());
+  }
+
+  onCancel() {
+    this.goToList();
+  }
+
+  goToList() {
+    this.props.router.push('/');
   }
 
   render() {
@@ -49,19 +60,25 @@ class ContactEdit extends Component {
       <Page>
         <h2>Edit Contact</h2>
         <Card className={ styles.contact }>
-          <Avatar className={ styles.avatar } src={ contact.avatar } size="50" />
+          <Avatar
+            className={ styles.avatar }
+            src={ contact.avatar }
+            size="50"
+          />
           <div className={ styles.details } >
             <Form { ...formProps }>
               <label>Name</label>
               <FormInput field="name" />
               <label>Email</label>
               <FormInput field="email" type="email" />
-              
+
               <div className={ styles.actions }>
-                <Link to="">
-                  <button className="button" type="button">Cancel</button>
-                </Link>
-                <button className="primary-button" type="submit">Save</button>
+                <button className="button" type="button" onClick={ this.onCancel }>
+                  Cancel
+                </button>
+                <LoadingButton className="button save" type="submit">
+                  Save
+                </LoadingButton>
               </div>
             </Form>
           </div>
@@ -71,8 +88,8 @@ class ContactEdit extends Component {
   }
 }
 
-export default withResolve({
+export default flow(withRouter, withResolve({
   resolve: {
     contact: ({ params }) => api.contacts.getContact(params.id)
   }
-})(ContactEdit);
+}))(ContactEdit);
