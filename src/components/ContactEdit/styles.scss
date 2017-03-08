@@ -1,0 +1,18 @@
+@import "../../shared";
+
+:local(.contact) {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: $spacing-m;
+  cursor: pointer;
+}
+
+:local(.details) {
+  margin-left: $spacing-l;
+}
+
+:local(.actions) {
+  display: flex;
+  justify-content: flex-end;
+}
