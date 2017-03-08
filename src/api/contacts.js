@@ -16,16 +16,16 @@ export function getContact(id) {
 
 updateContact.operation = 'UPDATE';
 export function updateContact(contact) {
-  return axios.patch(`${BASE_URL}/${contact.id}`, user).then(extractData);
+  return axios.patch(`${BASE_URL}/${contact.id}`, contact).then(extractData);
 }
 
 createContact.operation = 'CREATE';
 export function createContact(contact) {
-  return axios.post(BASE_URL, user).then(extractData);
+  return axios.post(BASE_URL, contact).then(extractData);
 
 }
 
 deleteContact.operation = 'DELETE';
 export function deleteContact(id) {
-  return axious.delete(`${BASE_URL}/${id}`).then(extractData);
+  return axios.delete(`${BASE_URL}/${id}`).then(extractData);
 }
