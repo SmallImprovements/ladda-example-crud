@@ -1,0 +1,21 @@
+@import "../../shared";
+
+:local(.contact) {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: $spacing-m;
+}
+
+:local(.details) {
+  margin-left: $spacing-l;
+}
+
+:local(.name) {
+  @include type-m;
+}
+
+:local(.email) {
+  @include type-s;
+  color: $secondary-darker;
+}
