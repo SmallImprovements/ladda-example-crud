@@ -16,12 +16,15 @@ function ContactEdit({ contact, router }) {
     }).then(goToList);
   };
 
+  const onRemove = () => api.contacts.deleteContact().then(goToList);
+
   return (
     <NarrowPage>
       <h2>Edit Contact</h2>
       <ContactEditForm
         contact={ contact }
         onSave={ onSave }
+        onRemove={ onRemove }
         onCancel={ goToList }
       />
     </NarrowPage>

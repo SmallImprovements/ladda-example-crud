@@ -9,6 +9,7 @@
 
 :local(.details) {
   margin-left: $spacing-l;
+  width: 100%;
 }
 
 :local(.actions) {
@@ -16,6 +17,6 @@
   justify-content: space-between;
 
   button {
-    width: 40%;
+    width: 30%;
   }
 }

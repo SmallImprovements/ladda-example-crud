@@ -36,7 +36,7 @@ class ContactEditForm extends Component {
   }
 
   render() {
-    const { contact, onCancel } = this.props;
+    const { contact, onRemove, onCancel } = this.props;
 
     const formProps = {
       data: this.state.form,
@@ -49,7 +49,7 @@ class ContactEditForm extends Component {
         <Avatar
           className={ styles.avatar }
           src={ contact.avatar }
-          size="50"
+          size="75"
         />
         <div className={ styles.details } >
           <Form { ...formProps }>
@@ -65,6 +65,16 @@ class ContactEditForm extends Component {
                 onClick={ onCancel }>
                 Cancel
               </button>
+              { onRemove ?
+                  <button
+                    className="button remove"
+                    type="button"
+                    onClick={ onRemove }>
+                    Remove
+                  </button> :
+                  null
+              }
+
               <LoadingButton className="button save" type="submit">
                 Save
               </LoadingButton>
