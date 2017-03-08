@@ -7,6 +7,13 @@ export default function Nav() {
     <div className={styles.navContainer}>
       <nav className={styles.nav}>
         <span className={styles.title}>Ladda Cache CRUD Example</span>
+        <a 
+          type="button"
+          className="button save"
+          target="_blank"
+          href="https://github.com/SmallImprovements/ladda-example-crud">
+          Check out the source code
+        </a>
       </nav>
     </div>
   );
