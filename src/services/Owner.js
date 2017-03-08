@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { ROOT } from 'constants/paths';
 
-const KEY = 'ladda-example-crud-owner-id';
+const KEY = 'ladda-example-crud-owner-id-v1';
 
 function getStorage() {
   return window.localStorage; // eslint-disable-line no-undef
