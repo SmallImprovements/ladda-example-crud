@@ -1,7 +1,6 @@
 import { Component, PropTypes } from 'react';
 import { forEach, reduce } from 'lodash';
 import Input from '../Input';
-import withNotifications from 'hocs/withNotifications';
 
 export function createFormState(fields, initialValues = {}) {
   return reduce(fields, (mem, field) => {
@@ -72,15 +71,12 @@ class FormComponent extends Component {
     const {
       onSubmit,
       children,
-      notifications,
-      notificationService,
       ...other
     } = this.props;
 
     const wrappedOnSubmit = (ev) => {
       const res = onSubmit(ev);
       forEach(this.submitCallbacks, (cb) => cb(res));
-      notificationService.applyToPromise(res, notifications);
     };
     return <form onSubmit={ wrappedOnSubmit } { ...other }>{ children }</form>;
   }
@@ -88,7 +84,7 @@ class FormComponent extends Component {
 
 FormComponent.childContextTypes = FORM_CONTEXT;
 
-export const Form = withNotifications(FormComponent);
+export const Form = FormComponent;
 
 export function FormInput(
   { field, type = 'text' },
