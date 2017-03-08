@@ -25,6 +25,6 @@ export function createContact(contact) {
 }
 
 deleteContact.operation = 'DELETE';
-export function deleteContact(id) {
-  return axios.delete(`${BASE_URL}/${id}`).then(extractData);
+export function deleteContact(contact) {
+  return axios.delete(`${BASE_URL}/${contact.id}`).then(extractData);
 }
