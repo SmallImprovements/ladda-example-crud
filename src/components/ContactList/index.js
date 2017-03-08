@@ -23,8 +23,8 @@ function Contact({ contact }) {
   );
 }
 
-export default flow(withOwnerId, withResolve({
+export default flow(withResolve({
   resolve: {
-    contacts: ({ ownerId }) => api.contacts.getUsers(ownerId)
+    contacts: ({ ownerId }) => api.contacts.getContacts(ownerId)
   }
-}))(ContactList);
+}), withOwnerId)(ContactList);

@@ -1,5 +1,5 @@
 import { build } from 'ladda-cache';
-import * as contacs from './contacts';
+import * as contacts from './contacts';
 
 const config = {
     contacts: {
