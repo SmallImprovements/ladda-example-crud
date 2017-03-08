@@ -9,6 +9,11 @@ export function getContacts(ownerId) {
   return axios.get(BASE_URL, { params: { ownerId }}).then(extractData);
 }
 
+getContact.operation = 'READ';
+export function getContact(id) {
+  return axios.get(`${BASE_URL}/${id}`).then(extractData);
+}
+
 updateContact.operation = 'UPDATE';
 export function updateContact(contact) {
   return axios.patch(`${BASE_URL}/${contact.id}`, user).then(extractData);
