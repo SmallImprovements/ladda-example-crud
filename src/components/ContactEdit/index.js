@@ -18,14 +18,32 @@ class ContactEdit extends Component {
         email: props.contact.email
       })
     };
+
+    this.onFormChange = this.onFormChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onFormChange(form) {
     this.setState({ form });
   }
 
+  onSubmit(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    api.contacts.updateContact({
+      ...this.props.contact,
+      ...this.state.form
+    });
+  }
+
   render() {
     const { contact } = this.props;
+
+    const formProps = {
+      data: this.state.form,
+      onChange: this.onFormChange,
+      onSubmit: this.onSubmit
+    };
     
     return (
       <Page>
@@ -33,17 +51,19 @@ class ContactEdit extends Component {
         <Card className={ styles.contact }>
           <Avatar className={ styles.avatar } src={ contact.avatar } size="50" />
           <div className={ styles.details } >
-            <Form data={ this.state.form } onChange={ this.onFormChange }>
+            <Form { ...formProps }>
               <label>Name</label>
               <FormInput field="name" />
               <label>Email</label>
               <FormInput field="email" type="email" />
-            </Form>
-            <div className={ styles.actions }>
-              <Link to="">
-                <button type="button">Cancel</button>
+              
+              <div className={ styles.actions }>
+                <Link to="">
+                  <button className="button" type="button">Cancel</button>
                 </Link>
-            </div>
+                <button className="primary-button" type="submit">Save</button>
+              </div>
+            </Form>
           </div>
         </Card>
       </Page>

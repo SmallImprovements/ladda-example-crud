@@ -6,7 +6,7 @@ const extractData = (response) => response.data;
 
 getContacts.operation = 'READ';
 export function getContacts(ownerId) {
-  return axios.get(BASE_URL, { params: { ownerId }}).then(extractData);
+  return axios.get(BASE_URL, { params: { ownerId } }).then(extractData);
 }
 
 getContact.operation = 'READ';
