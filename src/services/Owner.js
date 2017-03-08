@@ -1,4 +1,4 @@
-import shortid from shortid;
+import shortid from 'shortid';
 
 const KEY = 'ladda-example-crud-owner-id';
 

@@ -1,7 +1,6 @@
 import { pure } from 'recompose';
 import { createElement, Component } from 'react';
 import { map, reduce, zip } from 'lodash';
-import client from 'services/Client';
 
 class Container extends Component {
   constructor(props) {

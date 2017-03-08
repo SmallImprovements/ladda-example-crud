@@ -2,9 +2,7 @@ import 'base.scss';
 
 import { Component } from 'react';
 import Nav from './Nav';
-import withOwnerId from 'hocs/withOwner';
-
-import { NotificationsProvider } from '../../services/Notifications';
+import withOwnerId from 'hocs/withOwnerId';
 
 class Root extends Component {
   constructor(props) {
@@ -28,12 +26,12 @@ class Root extends Component {
     const { isReady } = this.state;
     const { children } = this.props;
     return (
-      <NotificationsProvider>
+      <div>
           <Nav />
           <div className="container">
             { isReady ? children : <Setup /> }
           </div>
-      </NotificationsProvider>
+      </div>
     );
   }
 }
