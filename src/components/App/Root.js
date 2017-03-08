@@ -1,8 +1,11 @@
 import 'base.scss';
 
 import { Component } from 'react';
+
 import Nav from './Nav';
 import withOwnerId from 'hocs/withOwnerId';
+import { setup } from 'services/Owner';
+
 
 class Root extends Component {
   constructor(props) {
@@ -18,7 +21,7 @@ class Root extends Component {
     if (this.props.ownerId) {
       this.setReady();
     } else {
-      // create demo content, then set ready
+      setup().then(() => this.setReady());
     }
   }
 
