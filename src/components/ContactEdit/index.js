@@ -16,7 +16,7 @@ function ContactEdit({ contact, router }) {
     }).then(goToList);
   };
 
-  const onRemove = () => api.contacts.deleteContact(contact).then(goToList);
+  const onRemove = () => api.contacts.deleteContact(contact.id).then(goToList);
 
   return (
     <NarrowPage>
