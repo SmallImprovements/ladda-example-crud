@@ -66,12 +66,12 @@ class ContactEditForm extends Component {
                 Cancel
               </button>
               { onRemove ?
-                  <button
+                  <LoadingButton
                     className="button remove"
                     type="button"
                     onClick={ onRemove }>
                     Remove
-                  </button> :
+                  </LoadingButton> :
                   null
               }
 
