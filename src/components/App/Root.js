@@ -7,6 +7,8 @@ import Footer from './Footer';
 import withOwnerId from 'hocs/withOwnerId';
 import { setup } from 'services/Owner';
 
+import styles from './Root.scss';
+
 
 class Root extends Component {
   constructor(props) {
@@ -33,7 +35,7 @@ class Root extends Component {
       <div>
           <Nav />
           <div className="container">
-            { isReady ? children : <Setup /> }
+            { isReady ? { children } : <Setup /> }
           </div>
           <Footer />
       </div>
@@ -43,8 +45,8 @@ class Root extends Component {
 
 function Setup() {
   return (
-    <div>
-      Setup...
+    <div className={ styles.setup }>
+      Creating sample content...
     </div>
   );
 }
