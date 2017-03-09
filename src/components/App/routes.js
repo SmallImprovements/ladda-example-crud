@@ -1,13 +1,13 @@
 import { Route, IndexRoute } from 'react-router';
 
 import Root from './Root';
-import ContactList from 'components/ContactList';
+import Home from 'components/Home';
 import ContactCreate from 'components/ContactCreate';
 import ContactEdit from 'components/ContactEdit';
 
 const routes = (
   <Route path="/" component={ Root }>
-    <IndexRoute component={ ContactList } />
+    <IndexRoute component={ Home } />
     <Route path="create" component={ ContactCreate } />
     <Route path="edit/:id" component={ ContactEdit } />
   </Route>

@@ -1,15 +1,8 @@
 @import "../../shared";
 
-:local(.header) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 :local(.contact) {
   display: flex;
   align-items: center;
-  max-width: 500px;
   margin-bottom: $spacing-m;
   cursor: pointer;
 

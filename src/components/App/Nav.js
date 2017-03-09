@@ -1,13 +1,14 @@
-import { createElement } from 'react';
-import { filter, flow, map } from 'lodash';
+import { Link } from 'react-router';
 import styles from './Nav.scss';
 
 export default function Nav() {
   return (
     <div className={styles.navContainer}>
       <nav className={styles.nav}>
-        <span className={styles.title}>Ladda Cache CRUD Example</span>
-        <a 
+        <Link className={styles.title} to="">
+          Ladda Cache CRUD Example
+        </Link>
+        <a
           type="button"
           className="button save"
           target="_blank"
@@ -17,4 +18,4 @@ export default function Nav() {
       </nav>
     </div>
   );
-};
+}
