@@ -1,10 +1,14 @@
 import { build } from 'ladda-cache';
 import * as contacts from './contacts';
+import * as activities from './activities';
 
 const config = {
   contacts: {
     api: contacts,
-    ttl: 300
+    invalidates: ['activities']
+  },
+  activities: {
+    api: activities
   }
 };
 
