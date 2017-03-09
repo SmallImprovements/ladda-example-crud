@@ -33664,11 +33664,12 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "@keyframes blink {\n  to {\n    opacity: 0.3; } }\n\n._10GjejkMamqxyRuGN4LRV8 {\n  font-size: 14px;\n  line-height: 18px;\n  position: fixed;\n  height: 38px;\n  width: 100%;\n  bottom: 0;\n  background-color: #fafafa;\n  color: #546371;\n  border-top: 1px solid #DDD;\n  padding: 12px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center; }\n  ._10GjejkMamqxyRuGN4LRV8 img {\n    vertical-align: bottom; }\n", ""]);
+exports.push([module.i, "@keyframes blink {\n  to {\n    opacity: 0.3; } }\n\n._10GjejkMamqxyRuGN4LRV8 {\n  font-size: 14px;\n  line-height: 18px;\n  position: fixed;\n  height: 38px;\n  width: 100%;\n  bottom: 0;\n  background-color: #fafafa;\n  color: #546371;\n  border-top: 1px solid #DDD;\n  padding: 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  ._10GjejkMamqxyRuGN4LRV8 img {\n    vertical-align: bottom; }\n\n._2L4PVwtfEGZkEsv44r7uQ3 {\n  font-size: 12px;\n  line-height: 14px;\n  font-style: italic; }\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "_10GjejkMamqxyRuGN4LRV8"
+	"container": "_10GjejkMamqxyRuGN4LRV8",
+	"hint": "_2L4PVwtfEGZkEsv44r7uQ3"
 };
 
 /***/ }),
@@ -45599,6 +45600,11 @@ function Footer() {
   return React.createElement(
     'footer',
     { className: _Footer2.default.container },
+    React.createElement(
+      'span',
+      { className: _Footer2.default.hint },
+      'Hint: Check out the network traffic in your developer console!'
+    ),
     React.createElement(
       'a',
       { href: 'http://www.small-improvements.com' },

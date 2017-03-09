@@ -13,11 +13,16 @@
   padding: $spacing-m;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   img {
     vertical-align: bottom;
   }
 
+}
+
+:local(.hint) {
+  @include type-xs;
+  font-style: italic;
 }
