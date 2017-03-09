@@ -11,7 +11,7 @@ const TRANSFORMERS = {
   SETUP: () => 'Sample contacts created',
   CREATE: ({ name }) => `${name} added`,
   EDIT: ({ name }) => `${name} edited`,
-  DELETE: ({ name }) => `${name} deleted`
+  DELETE: ({ name }) => `${name} removed`
 };
 
 function toProps({ type, data, createdAt }) {
