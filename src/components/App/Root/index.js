@@ -2,12 +2,12 @@ import 'base.scss';
 
 import { Component } from 'react';
 
-import Nav from './Nav';
-import Footer from './Footer';
+import Nav from '../Nav';
+import Footer from '../Footer';
 import withOwnerId from 'hocs/withOwnerId';
 import { setup } from 'services/Owner';
 
-import styles from './Root.scss';
+import styles from './styles.scss';
 
 
 class Root extends Component {
@@ -35,7 +35,7 @@ class Root extends Component {
       <div>
           <Nav />
           <div className="container">
-            { isReady ? { children } : <Setup /> }
+            { isReady ? children : <Setup /> }
           </div>
           <Footer />
       </div>
