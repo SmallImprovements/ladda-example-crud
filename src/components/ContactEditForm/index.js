@@ -69,6 +69,7 @@ class ContactEditForm extends Component {
                   <LoadingButton
                     className="button remove"
                     type="button"
+                    noSubmit={ true }
                     onClick={ onRemove }>
                     Remove
                   </LoadingButton> :

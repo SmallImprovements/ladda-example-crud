@@ -23,7 +23,8 @@ class LoadingButton extends Component {
 
   componentWillMount() {
     const { form } = this.context;
-    if (form) {
+    const { noSubmit } = this.props;
+    if (form && !noSubmit) {
       this.submitListener = form.onSubmit((pr) => this.setPromise(pr));
     }
   }
@@ -56,7 +57,7 @@ class LoadingButton extends Component {
     });
 
     const props = {
-      ...otherProps,
+      ...omit(otherProps, ['noSubmit']),
       className,
       onClick: onClick ? (ev) => this.setPromise(onClick(ev)) : (() => {})
     };

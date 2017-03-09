@@ -31415,6 +31415,7 @@ var ContactEditForm = function (_Component) {
                 {
                   className: 'button remove',
                   type: 'button',
+                  noSubmit: true,
                   onClick: onRemove },
                 'Remove'
               ) : null,
@@ -47782,8 +47783,9 @@ var LoadingButton = function (_Component) {
       var _this2 = this;
 
       var form = this.context.form;
+      var noSubmit = this.props.noSubmit;
 
-      if (form) {
+      if (form && !noSubmit) {
         this.submitListener = form.onSubmit(function (pr) {
           return _this2.setPromise(pr);
         });
@@ -47824,7 +47826,7 @@ var LoadingButton = function (_Component) {
         loading: this.state.loading
       });
 
-      var props = _extends({}, otherProps, {
+      var props = _extends({}, (0, _lodash.omit)(otherProps, ['noSubmit']), {
         className: className,
         onClick: onClick ? function (ev) {
           return _this4.setPromise(onClick(ev));
