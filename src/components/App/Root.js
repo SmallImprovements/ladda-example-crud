@@ -3,6 +3,7 @@ import 'base.scss';
 import { Component } from 'react';
 
 import Nav from './Nav';
+import Footer from './Footer';
 import withOwnerId from 'hocs/withOwnerId';
 import { setup } from 'services/Owner';
 
@@ -34,6 +35,7 @@ class Root extends Component {
           <div className="container">
             { isReady ? children : <Setup /> }
           </div>
+          <Footer />
       </div>
     );
   }

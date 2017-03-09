@@ -1,0 +1,23 @@
+@import "../../shared";
+:local(.container) {
+  @include type-s;
+  
+  position: fixed;
+  height: $footer-height;
+  width: 100%;
+  bottom: 0;
+  background-color: $off;
+  color: $secondary-darker;
+  border-top: 1px solid $medium;
+
+  padding: $spacing-s;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  img {
+    vertical-align: bottom;
+  }
+
+}
