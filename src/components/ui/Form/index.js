@@ -87,7 +87,7 @@ FormComponent.childContextTypes = FORM_CONTEXT;
 export const Form = FormComponent;
 
 export function FormInput(
-  { field, type = 'text' },
+  { field, type = 'text', autoFocus = false },
   { form: { onChange, data } }
 ) {
   return (
@@ -97,7 +97,8 @@ export function FormInput(
       id={ field }
       value={data.values[field]}
       error={data.errors[field]}
-      onChange={onChange(field)}/>
+      onChange={onChange(field)}
+      autoFocus={ autoFocus }/>
   );
 }
 FormInput.contextTypes = FORM_CONTEXT;

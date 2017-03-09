@@ -54,7 +54,7 @@ class ContactEditForm extends Component {
         <div className={ styles.details } >
           <Form { ...formProps }>
             <label>Name</label>
-            <FormInput field="name" />
+            <FormInput field="name" autoFocus={ true } />
             <label>Email</label>
             <FormInput field="email" type="email" />
 
