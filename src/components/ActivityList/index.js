@@ -11,13 +11,13 @@ const TRANSFORMERS = {
   SETUP: () => 'Sample contacts created',
   CREATE: ({ name }) => `${name} added`,
   EDIT: ({ name }) => `${name} edited`,
-  DELETE: () => 'Contact deleted'
+  DELETE: ({ name }) => `${name} deleted`
 };
 
 function toProps({ type, data, createdAt }) {
   const { avatar } = data;
   const text = (TRANSFORMERS[type] || noop)(data);
-  return { avatar, text, createdAt }
+  return { avatar, text, createdAt };
 }
 
 function ActivityList({ activities }) {
