@@ -48,7 +48,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'src/**/*spec.js'",
     "test:watch": "npm run test -- --watch",
     "start": "./bin/copy_html.sh && webpack-dev-server --progress --colors --hot --config ./webpack.config.js",
-    "build": "./bin/copy_html.sh && webpack"
+    "build": "./bin/copy_html.sh && webpack",
+    "deploy": "NODE_ENV=production npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
