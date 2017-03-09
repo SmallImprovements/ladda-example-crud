@@ -36,6 +36,7 @@
     "axios": "^0.14.0",
     "babel-eslint": "^7.1.1",
     "classnames": "^2.2.5",
+    "es6-promise-promise": "^1.0.0",
     "ladda-cache": "^0.1.4",
     "lodash": "^4.17.2",
     "react": "^15.3.2",

@@ -41,6 +41,9 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       PRODUCTION: process.env.NODE_ENV === 'production'
+    }),
+    new webpack.ProvidePlugin({
+      Promise: 'es6-promise-promise'
     })
   ],
   devServer: {
