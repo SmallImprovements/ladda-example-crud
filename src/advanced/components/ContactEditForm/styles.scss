@@ -1,0 +1,22 @@
+@import "../../shared";
+
+:local(.contact) {
+  display: flex;
+  max-width: 500px;
+  margin-bottom: $spacing-m;
+  cursor: pointer;
+}
+
+:local(.details) {
+  margin-left: $spacing-l;
+  width: 100%;
+}
+
+:local(.actions) {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    width: 30%;
+  }
+}

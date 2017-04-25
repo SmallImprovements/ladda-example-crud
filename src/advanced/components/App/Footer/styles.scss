@@ -1,0 +1,27 @@
+@import "../../../shared";
+:local(.container) {
+  @include type-s;
+  
+  position: fixed;
+  height: $footer-height;
+  width: 100%;
+  bottom: 0;
+  background-color: $off;
+  color: $secondary-darker;
+  border-top: 1px solid $medium;
+
+  padding: $spacing-m;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    vertical-align: bottom;
+  }
+
+}
+
+:local(.hint) {
+  font-style: italic;
+}

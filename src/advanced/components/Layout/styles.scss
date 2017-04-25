@@ -1,0 +1,16 @@
+@import "../../shared";
+
+:local(.page) {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+:local(.narrowPage) {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+:local(.card) {
+  @include card;
+  padding: $spacing-l;
+}

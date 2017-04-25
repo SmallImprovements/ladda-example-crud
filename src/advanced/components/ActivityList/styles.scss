@@ -1,0 +1,13 @@
+@import "../../shared";
+
+:local(.activity) {
+  @include type-s;
+  color: $secondary-darker;
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-m;
+
+  img {
+    margin-right: $spacing-s;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../shared";
+
+$width: 600px;
+
+:local(.body) {
+  display: flex;
+
+  section {
+    width: $width;
+  }
+
+  aside {
+    margin-left: ($spacing-l * 2);
+  }
+}
+
+:local(.header) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $width;
+}

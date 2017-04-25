@@ -4,7 +4,8 @@ const webpack = require('webpack');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    basic: './basic/index.js'
+    basic: './basic/index.js',
+    advanced: './advanced/index.js'
   },
   module: {
     loaders: [
