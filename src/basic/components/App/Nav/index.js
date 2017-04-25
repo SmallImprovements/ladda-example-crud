@@ -1,13 +1,29 @@
 import { Link } from 'react-router';
+import classNames from 'classnames';
 import styles from './styles.scss';
 
 export default function Nav() {
   return (
     <div className={styles.navContainer}>
       <nav className={styles.nav}>
-        <Link className={styles.title} to="">
-          Ladda Cache CRUD Example
-        </Link>
+        <div className={styles.navLeft}>
+          <Link className={styles.title} to="">
+            Ladda Cache CRUD Example
+          </Link>
+          <span className={styles.navItem}>
+            { '  -   ' }
+          </span>
+          <a
+            className={classNames(styles.navItem, styles.navItemActive)}
+            href="/basic">
+            Basic
+          </a>
+          <a
+            className={styles.navItem}
+            href="/advanced">
+            Advanced
+          </a>
+        </div>
         <a
           type="button"
           className="button save"

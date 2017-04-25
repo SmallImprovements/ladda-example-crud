@@ -17,6 +17,14 @@
   }
 }
 
+:local(.navItem) {
+  margin-left: $spacing-m;
+}
+
+:local(.navItemActive) {
+  font-weight: bold;
+}
+
 :local(.title) {
   @include type-l;
   font-weight: $font-weight-heavy;
