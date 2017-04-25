@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ROOT } from 'constants/paths';
+import { ROOT } from 'basic/constants/paths';
 
 const BASE_URL = `${ROOT}/api/activities`;
 const getData = (response) => response.data;

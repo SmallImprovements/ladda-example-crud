@@ -1,9 +1,9 @@
 import { flow, map, noop } from 'lodash';
-import withResolve from 'hocs/withResolve';
-import withOwnerId from 'hocs/withOwnerId';
-import Avatar from 'components/ui/Avatar';
+import withResolve from 'basic/hocs/withResolve';
+import withOwnerId from 'basic/hocs/withOwnerId';
+import Avatar from 'basic/components/ui/Avatar';
 
-import api from 'api';
+import api from 'basic/api';
 
 import styles from './styles.scss';
 

@@ -1,13 +1,11 @@
-'use strict';
-
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: [
-    './index.js'
-  ],
+  entry: {
+    basic: './basic/index.js'
+  },
   module: {
     loaders: [
       {
@@ -28,12 +26,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss'],
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -49,7 +47,11 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     historyApiFallback: {
-      disableDotRule: true
-    },
+      disableDotRule: true,
+      rewrites: [
+        { from: 'basic', to: '/basic.html' },
+        { from: 'advanced', to: '/advanced.html' }
+      ]
+    }
   }
 };

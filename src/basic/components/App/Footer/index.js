@@ -1,4 +1,4 @@
-import Avatar from 'components/ui/Avatar';
+import Avatar from 'basic/components/ui/Avatar';
 import styles from './styles.scss';
 
 export default function Footer() {

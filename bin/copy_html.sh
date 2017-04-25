@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 mkdir -p dist
-cp src/index.html dist/index.html
+cp src/basic/index.html dist/basic.html

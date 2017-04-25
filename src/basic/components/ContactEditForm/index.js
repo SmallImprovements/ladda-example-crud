@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import { Page, Card } from 'components/Layout';
-import { Form, FormInput, createFormState } from 'components/ui/Form';
-import Avatar from 'components/ui/Avatar';
-import LoadingButton from 'components/ui/LoadingButton';
+import { Page, Card } from 'basic/components/Layout';
+import { Form, FormInput, createFormState } from 'basic/components/ui/Form';
+import Avatar from 'basic/components/ui/Avatar';
+import LoadingButton from 'basic/components/ui/LoadingButton';
 
 import styles from './styles.scss';
 
@@ -32,7 +32,7 @@ class ContactEditForm extends Component {
   }
 
   goToList() {
-    this.props.router.push('/');
+    this.props.router.push('/basic');
   }
 
   render() {

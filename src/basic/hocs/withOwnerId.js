@@ -1,5 +1,5 @@
 import { hoistStatics, mapProps } from 'recompose';
-import * as Owner from 'services/Owner';
+import * as Owner from 'basic/services/Owner';
 
 export default function withOwnerId(component) {
   return hoistStatics(

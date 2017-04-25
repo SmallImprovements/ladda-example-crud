@@ -1,7 +1,7 @@
 import shortid from 'shortid';
 import axios from 'axios';
 
-import { ROOT } from 'constants/paths';
+import { ROOT } from 'basic/constants/paths';
 
 const KEY = 'ladda-example-crud-owner-id-v1';
 

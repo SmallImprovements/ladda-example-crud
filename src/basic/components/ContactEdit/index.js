@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
 import { flow } from 'lodash';
-import withResolve from 'hocs/withResolve';
-import api from 'api';
-import { NarrowPage, Card } from 'components/Layout';
-import ContactEditForm from 'components/ContactEditForm';
+import withResolve from 'basic/hocs/withResolve';
+import api from 'basic/api';
+import { NarrowPage, Card } from 'basic/components/Layout';
+import ContactEditForm from 'basic/components/ContactEditForm';
 
 function ContactEdit({ contact, router }) {
-  const goToList = () => router.push('/');
+  const goToList = () => router.push('/basic');
 
   const onSave = (updatedContact) => {
     return api.contacts.updateContact({
