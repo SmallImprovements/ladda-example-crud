@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import ContactList from 'basic/components/ContactList';
-import ActivityList from 'basic/components/ActivityList';
-import { Page } from 'basic/components/Layout';
+import ContactList from 'advanced/components/ContactList';
+import ActivityList from 'advanced/components/ActivityList';
+import { Page } from 'advanced/components/Layout';
 
 import styles from './styles.scss';
 
@@ -11,7 +11,7 @@ export default function Home() {
       <div className={ styles.header }>
         <h2>Contact List</h2>
         <div>
-          <Link className="button save" to="basic/create">
+          <Link className="button save" to="advanced/create">
             ➕ Add Contact
           </Link>
         </div>

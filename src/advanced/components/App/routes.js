@@ -1,9 +1,9 @@
 import { Route, IndexRoute } from 'react-router';
 
 import Root from './Root';
-import Home from 'basic/components/Home';
-import ContactCreate from 'basic/components/ContactCreate';
-import ContactEdit from 'basic/components/ContactEdit';
+import Home from 'advanced/components/Home';
+import ContactCreate from 'advanced/components/ContactCreate';
+import ContactEdit from 'advanced/components/ContactEdit';
 
 const routes = (
   <Route path="/advanced" component={ Root }>

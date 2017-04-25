@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ROOT } from 'basic/constants/paths';
+import { ROOT } from 'advanced/constants/paths';
 import styles from './styles.scss';
 
 export default function Avatar({ src, size = 30, round = true }) {

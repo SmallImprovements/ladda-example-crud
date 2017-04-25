@@ -14,12 +14,12 @@ export default function Nav() {
             { '  -   ' }
           </span>
           <a
-            className={classNames(styles.navItem, styles.navItemActive)}
+            className={styles.navItem}
             href="/basic">
             Basic
           </a>
           <a
-            className={styles.navItem}
+            className={classNames(styles.navItem, styles.navItemActive)}
             href="/advanced">
             Advanced
           </a>

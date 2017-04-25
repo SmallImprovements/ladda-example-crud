@@ -1,11 +1,11 @@
 import { Link } from 'react-router';
 import { flow, map } from 'lodash';
-import { Card } from 'basic/components/Layout';
-import Avatar from 'basic/components/ui/Avatar';
-import withResolve from 'basic/hocs/withResolve';
-import withOwnerId from 'basic/hocs/withOwnerId';
+import { Card } from 'advanced/components/Layout';
+import Avatar from 'advanced/components/ui/Avatar';
+import withResolve from 'advanced/hocs/withResolve';
+import withOwnerId from 'advanced/hocs/withOwnerId';
 
-import api from 'basic/api';
+import api from 'advanced/api';
 
 import styles from './styles.scss';
 
@@ -13,7 +13,7 @@ function ContactList({ contacts }) {
   return (
     <div>
       { map(contacts, (contact) => (
-        <Link key={ contact.id } to={ `basic/edit/${contact.id}` } >
+        <Link key={ contact.id } to={ `advanced/edit/${contact.id}` } >
           <Contact key={ contact.id } contact={ contact } />
         </Link>
       ))}

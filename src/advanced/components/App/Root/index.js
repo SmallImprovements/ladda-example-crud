@@ -1,11 +1,11 @@
-import 'basic/base.scss';
+import 'advanced/base.scss';
 
 import { Component } from 'react';
 
 import Nav from '../Nav';
 import Footer from '../Footer';
-import withOwnerId from 'basic/hocs/withOwnerId';
-import { setup } from 'basic/services/Owner';
+import withOwnerId from 'advanced/hocs/withOwnerId';
+import { setup } from 'advanced/services/Owner';
 
 import styles from './styles.scss';
 

@@ -1,10 +1,10 @@
 import { flow } from 'lodash';
 import { withRouter } from 'react-router';
-import withResolve from 'basic/hocs/withResolve';
-import withOwnerId from 'basic/hocs/withOwnerId';
-import api from 'basic/api';
-import { NarrowPage, Card } from 'basic/components/Layout';
-import ContactEditForm from 'basic/components/ContactEditForm';
+import withResolve from 'advanced/hocs/withResolve';
+import withOwnerId from 'advanced/hocs/withOwnerId';
+import api from 'advanced/api';
+import { NarrowPage, Card } from 'advanced/components/Layout';
+import ContactEditForm from 'advanced/components/ContactEditForm';
 
 const NEW_CONTACT = {
   name: '',
@@ -13,7 +13,7 @@ const NEW_CONTACT = {
 };
 
 function ContactCreate({ router, ownerId }) {
-  const goToList = () => router.push('/basic');
+  const goToList = () => router.push('/advanced');
 
   const onSave = (updatedContact) => {
     return api.contacts.createContact({
