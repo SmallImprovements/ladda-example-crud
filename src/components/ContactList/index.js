@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { flow, map } from 'lodash';
 import { Card } from 'components/Layout';
 import Avatar from 'components/ui/Avatar';
-import withResolve from 'hocs/withResolve';
+import { withData } from 'ladda-react';
 import withOwnerId from 'hocs/withOwnerId';
 
 import api from 'api';
@@ -33,7 +33,7 @@ function Contact({ contact }) {
   );
 }
 
-export default flow(withResolve({
+export default flow(withData({
   resolve: {
     contacts: ({ ownerId }) => api.contacts.getContacts(ownerId)
   }

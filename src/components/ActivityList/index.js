@@ -1,5 +1,5 @@
 import { flow, map, noop } from 'lodash';
-import withResolve from 'hocs/withResolve';
+import { withData } from 'ladda-react';
 import withOwnerId from 'hocs/withOwnerId';
 import Avatar from 'components/ui/Avatar';
 
@@ -39,7 +39,7 @@ function Activity({ avatar, text }) {
   );
 }
 
-export default flow(withResolve({
+export default flow(withData({
   resolve: {
     activities: ({ ownerId }) => api.activities.getActivities(ownerId)
   }

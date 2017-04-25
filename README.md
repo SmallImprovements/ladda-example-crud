@@ -27,12 +27,13 @@ You can see this in implemented by looking at the code for the components
 [ContactEdit](https://github.com/SmallImprovements/ladda-example-crud/blob/master/src/components/ContactEdit/index.js), [ContactList](https://github.com/SmallImprovements/ladda-example-crud/blob/master/src/components/ContactList/index.js) and [ActivityList](https://github.com/SmallImprovements/ladda-example-crud/blob/master/src/components/ActivityList/index.js).
 
 We use a higher order component to wrap our stateless presenter
-component. The HOC `withResolve` takes a configuration object, which
-defines which requests need to be fulfilled before the component can be
-rendered properly. E.g. in the case of `ContactList` we ask for a list of
-contacts by calling our API which is enhanced with Ladda's caching
-capabilities - the result of this call is then passed to our component
-as prop.
+component. The HOC `withData` from
+[ladda-react](https://github.com/ladda-js/ladda-react) takes a
+configuration object, which defines which requests need to be fulfilled
+before the component can be rendered properly. E.g. in the case of
+`ContactList` we ask for a list of contacts by calling our API which is
+enhanced with Ladda's caching capabilities - the result of this call is
+then passed to our component as prop.
 
 Try a couple of the following scenarios to see Ladda in action:
 

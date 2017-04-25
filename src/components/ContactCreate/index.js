@@ -1,7 +1,5 @@
-import { Component } from 'react';
 import { flow } from 'lodash';
 import { withRouter } from 'react-router';
-import withResolve from 'hocs/withResolve';
 import withOwnerId from 'hocs/withOwnerId';
 import api from 'api';
 import { NarrowPage, Card } from 'components/Layout';

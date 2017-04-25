@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
 import { flow } from 'lodash';
-import withResolve from 'hocs/withResolve';
+import { withData } from 'ladda-react';
 import api from 'api';
 import { NarrowPage, Card } from 'components/Layout';
 import ContactEditForm from 'components/ContactEditForm';
@@ -31,7 +31,7 @@ function ContactEdit({ contact, router }) {
   );
 }
 
-export default flow(withRouter, withResolve({
+export default flow(withRouter, withData({
   resolve: {
     contact: ({ params }) => api.contacts.getContact(params.id)
   }
