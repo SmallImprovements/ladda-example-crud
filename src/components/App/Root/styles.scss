@@ -1,8 +1,0 @@
-@import "../../../shared";
-
-:local(.setup) {
-    @include blink;
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-}
